@@ -1,8 +1,8 @@
-import { GetTodosAction, Todo } from '../types/todo';
+import { Todo, TodoActionTypes } from '../types/todo';
 
 export const getTodosActionCreator = (payload: Array<Todo>) => {
   return {
-    type: 'GET_TODOS',
+    type: TodoActionTypes.GET_TODOS,
     payload,
   };
 };
