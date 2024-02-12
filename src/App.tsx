@@ -1,17 +1,15 @@
 import { useEffect } from 'react';
 import './App.css';
-import { useDispatch } from 'react-redux';
-import { fetchTodos, getTodos } from './store/redux/thunk/todoThunk';
-
-
-const test = fetchTodos()
+import { getTodos } from './store/redux/thunk/todoThunk';
+import { useAppDispatch, useAppSelector } from './hooks/redux';
 
 const App = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+
+  const {todos} = useAppSelector(state => state.todos);
+
   useEffect(() => {
-    //test()
-    fetchTodos()
-    dispatch(fetchTodos());
+    dispatch(getTodos());
   },[])
 
   return <div>yo</div>;
