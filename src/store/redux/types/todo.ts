@@ -1,5 +1,5 @@
 import { ThunkAction, UnknownAction } from '@reduxjs/toolkit';
-import { RootState } from '../reducers';
+import { RootState } from '..';
 
 //TODOS
 export interface Todo {

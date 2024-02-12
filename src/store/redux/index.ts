@@ -1,4 +1,3 @@
-import { applyMiddleware, createStore } from 'redux';
 import { rootReducer } from './reducers';
 
 import { configureStore } from '@reduxjs/toolkit';
@@ -6,3 +5,7 @@ import { configureStore } from '@reduxjs/toolkit';
 export const store = configureStore({
   reducer: rootReducer,
 });
+
+export type AppDispatch = typeof store.dispatch;
+
+export type RootState = ReturnType<typeof rootReducer>;
